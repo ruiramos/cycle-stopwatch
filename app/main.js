@@ -59,7 +59,7 @@ function main(drivers){
     .scan((p, v) => {
       if(v === ':toggle'){
         pauser.onNext(!p);
-        _setPlaying(p);
+        _setPlaying(!p);
         return !p;
       }
       return p;
