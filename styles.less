@@ -1,0 +1,64 @@
+@highlight: #B5CAAE;
+@background: #96BDC6;
+
+body {
+  background: @background;
+}
+
+#timer {
+  text-align: center;
+  color: white;
+  font-family: Helvetica, sans;
+}
+
+#timer .title {
+  margin:1em 0;
+  font-size:4em;
+  opacity: 0.3;
+  transition: opacity 300ms ease-out;
+}
+
+#timer .title--on {
+  opacity: 1;
+}
+
+#timer button {
+  font-size: 1.25em;
+  border-top:0;
+  border-left:0;
+  padding: 10px 20px;
+  margin:0 5px;
+  cursor: pointer;
+}
+
+.button-style(@bg, @fg){ 
+  background: @bg;
+  color: @fg;
+  border-right: 2px solid darken(@bg, 10%);
+  border-bottom: 2px solid darken(@bg, 10%);
+
+  &:hover {
+    color: lighten(@fg, 8.5%);
+    background: lighten(@bg, 3.5%);
+  }
+}
+
+#timer .button--green {
+  .button-style(@highlight, #efefef);
+}
+
+#timer .button--grey {
+  .button-style(#dfdfdf, #aaa);
+}
+
+.numbers {
+  margin: 60px 0 40px 0;
+  font-size: 3em;
+}
+
+.numbers__separator,
+.numbers__miliseconds {
+  color: lighten(@background, 20%);
+}
+
+
