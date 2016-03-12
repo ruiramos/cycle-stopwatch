@@ -1,5 +1,5 @@
-@highlight: #B5CAAE;
-@background: #96BDC6;
+@highlight: #e91e63;
+@background: #3f51b5;
 
 body {
   background: @background;
@@ -39,7 +39,7 @@ body {
 
   &:hover {
     color: lighten(@fg, 8.5%);
-    background: lighten(@bg, 3.5%);
+    background: lighten(@bg, 5.5%);
   }
 }
 
@@ -59,6 +59,13 @@ body {
 .numbers__separator,
 .numbers__miliseconds {
   color: lighten(@background, 20%);
+}
+
+iframe {
+  margin: 0 auto;
+  display: block;
+  margin-top: 40px;
+  border: 0;
 }
 
 

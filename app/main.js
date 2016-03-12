@@ -4,9 +4,10 @@ import { Observable, Subject } from 'rx';
 
 require('../styles.less');
 
-/**
- * Utils, string formatting, ...
- */
+const _setPlaying = (p) => {
+  document.querySelector('iframe').contentWindow
+    .postMessage({playing: p}, '*');
+}
 
 // returns an array with `n` values, set to `undefined`
 const arrayWithElm = (n) => Array.apply(null, {length: n});
@@ -58,6 +59,7 @@ function main(drivers){
     .scan((p, v) => {
       if(v === ':toggle'){
         pauser.onNext(!p);
+        _setPlaying(p);
         return !p;
       }
       return p;
