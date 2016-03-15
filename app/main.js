@@ -95,19 +95,19 @@ function main(drivers){
           span({'className': 'numbers__miliseconds'}, formatMiliseconds(msTimerValue)),
         ]),
         button({
-          type: 'button', 
-          className: 'button--green',
-          attributes: {
-            'data-hook': 'toggle-timer'
-          }
-        }, toggleTimerText(isTimerOn)),
-        button({
           type: 'button',
           className: 'button--grey',
           attributes: {
             'data-hook': 'reset-timer'
           }
-        }, 'Reset timer'),
+        }, 'Reset timer'), 
+        button({
+          type: 'button', 
+          className: 'button--green',
+          attributes: {
+            'data-hook': 'toggle-timer'
+          }
+        }, toggleTimerText(isTimerOn))
       ]))
   }
 }
