@@ -23,8 +23,8 @@ const pad3 = (s) => pad(3, s);
 const pad2 = (...s) => s.map((v) => pad(2,v));
 
 // formats a string from elapsed time in ms
-const formatMinutes = (ms) => pad2(Math.floor((ms/1000/60) % 60));
-const formatSeconds = (ms) => pad2(Math.floor((ms/1000) % 1000));
+const formatMinutes = (ms) => pad2(Math.floor(ms/1000/60));
+const formatSeconds = (ms) => pad2(Math.floor((ms/1000) % 60));
 const formatMiliseconds = (ms) => pad3(ms % 1000);
 
 const toggleTimerText = function(isTimerOn){
